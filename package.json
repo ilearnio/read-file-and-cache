@@ -1,0 +1,22 @@
+{
+  "name": "framework-core",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/specs.js"
+  },
+  "author": {
+    "name": "Nikita Gavrilov",
+    "url": "https://github.com/ilearnio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilearnio/read-file-and-cache.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
