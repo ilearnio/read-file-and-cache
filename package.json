@@ -1,11 +1,26 @@
 {
-  "name": "framework-core",
+  "name": "read-file-and-cache",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/specs.js"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "read",
+    "file",
+    "cache",
+    "update",
+    "readFileAndCache",
+    "fs",
+    "readFile"
+  ],
   "author": {
     "name": "Nikita Gavrilov",
     "url": "https://github.com/ilearnio"

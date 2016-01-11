@@ -57,6 +57,22 @@ describe('Reading from a file', function() {
         }, { never_update: true })
       })
     })
+
+    it('should work when options are passed as second parameter', function(done) {
+      readFileAndCache(test_file, {}, function(err, result) { // callback
+        expect(err).to.equal(null)
+        expect(result.trim()).to.equal('ok')
+
+        result = readFileAndCache(test_file, {}).then(function(result) { // Promise
+          expect(result.trim()).to.equal('ok')
+
+          result = readFileAndCache(test_file, { sync: true }); // sync
+
+          expect(result.trim()).to.equal('ok')
+          done()
+        })
+      });
+    })
   })
 
 
