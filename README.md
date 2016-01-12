@@ -1,4 +1,6 @@
 # read-file-and-cache
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 
 Reads files and caches results (in memory). If the file was modified, will return updated version of it (options available)
 
@@ -57,3 +59,8 @@ let result = readFileAndCache(filepath, {
   check_delay: 3600 // check for updates every hour
 })
 ```
+
+[npm-image]: https://img.shields.io/npm/v/read-file-and-cache.svg
+[npm-url]: https://npmjs.org/package/read-file-and-cache
+[travis-image]: https://img.shields.io/travis/ilearnio/read-file-and-cache/master.svg
+[travis-url]: https://travis-ci.org/ilearnio/read-file-and-cache
