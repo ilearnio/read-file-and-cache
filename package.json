@@ -1,6 +1,6 @@
 {
   "name": "read-file-and-cache",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,9 @@
     "url": "https://github.com/ilearnio/read-file-and-cache.git"
   },
   "license": "MIT",
+  "dependencies": {
+    "es6-promise": "^3.0.2"
+  },
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4"

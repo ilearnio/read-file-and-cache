@@ -18,7 +18,6 @@ respond always with the fresh version of the file
 $ npm install --save read-file-and-cache
 ```
 
-
 ## Usage
 
 ```js

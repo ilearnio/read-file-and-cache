@@ -1,6 +1,5 @@
 var fs = require('fs')
 var path = require('path')
-var chai = require('chai')
 
 if (typeof Promise === 'undefined') {
   var Promise = require('es6-promise').Promise
