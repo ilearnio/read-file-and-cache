@@ -24,22 +24,31 @@ $ npm install --save read-file-and-cache
 ```js
 const readFileAndCache = require('read-file-and-cache')
 
+//
 // using a callback
+//
 readFileAndCache(filepath, function(err, result) {
   // ...
 })
 
+//
 // or a Promise
+//
 readFileAndCache(filepath).then(function(result) {
   // ...
 })
 
+//
 // or syncronously
-const readFileAndCacheSync = require('read-file-and-cache').readFileAndCacheSync
+//
+const readFileAndCacheSync = require('read-file-and-cache').sync
+// ES6: import { readFileAndCacheSync } from 'read-file-and-cache'
 
 let result = readFileAndCacheSync(filepath)
 
-// give it some options
+//
+// Give it some options
+//
 let result = readFileAndCache(filepath, {
   // Read synchronously (default: false)
   sync: true,

@@ -149,4 +149,5 @@ function readFile(filepath, callback) {
 }
 
 module.exports = readFileAndCache
+module.exports.sync = readFileAndCacheSync
 module.exports.readFileAndCacheSync = readFileAndCacheSync
