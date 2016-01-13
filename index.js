@@ -15,14 +15,13 @@ var cache = []
  * @param   {Function|object}  callback  - (optional) a callback function. When
  * object is passed, the attribute behaves like `options` and the function will
  * return a promise (no callback needed)
+ * @returns {void|Promise|string} - returns nothing when a callback is given,
+ * otherwise returns Promise. Can return a string (result) if `sync: true`
  *
  * Possible options:
  *   sync: false         // Read synchronously
  *   never_update: false // If true, cache for a file will be never updated
  *   check_delay: 0      // Delay between checks for file modifications in sec.
- *
- * @returns {void|Promise|string} - returns nothing when a callback is given,
- * otherwise returns Promise. Can return a string (result) if `sync: true`
  */
 function readFileAndCache(filepath, options, callback) {
   if (filepath[0] === '.')
@@ -48,7 +47,7 @@ function readFileAndCache(filepath, options, callback) {
   var need_check = !never_update && cached && (check_delay === 0 ||
     Date.now() >= cached.last_check + check_delay * 1000)
 
-  // return cached version immediately, without checking if file was changed
+  // return cached version immediately, without the check for changes
   if (cached && (never_update || !need_check)) {
     if (use_promise)
       return Promise.resolve(cached.content)
@@ -131,7 +130,7 @@ function readFile(filepath, callback) {
       obj.content = content
       cache.push(obj)
 
-      return out(null, content, true)
+      return out(null, content)
     }
   }
 

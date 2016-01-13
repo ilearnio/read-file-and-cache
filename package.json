@@ -1,7 +1,7 @@
 {
   "name": "read-file-and-cache",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Reads a file and caches the result (in memory). If the file was modified, will return updated version of it (options available)",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/specs.js"

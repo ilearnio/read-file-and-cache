@@ -2,7 +2,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 
-Reads files and caches results (in memory). If the file was modified, will return updated version of it (options available)
+Reads a file and caches the result (in memory). If the file was modified, will return updated version of it (options available)
 
 ## Use cases
 
@@ -56,7 +56,7 @@ let result = readFileAndCache(filepath, {
   // If true, cache for a file will be never updated (default: false)
   never_update: process.env.NODE_ENV === 'production', // never update cache when in production
   // Delay between checks for file modifications in sec. (default: 0)
-  check_delay: 3600 // check for updates every hour
+  check_delay: 3600 // check for updates every hour (0 to check everytime)
 })
 ```
 
